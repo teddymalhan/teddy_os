@@ -1,0 +1,21 @@
+[package]
+name = "teddy_os"
+version = "0.1.0"
+authors = ["Teddy Malhan <your.email@example.com>"]
+edition = "2021"
+
+[dependencies]
+bootloader = "0.9"
+
+
+[build-dependencies]
+bootimage = "0.10.3"  # Adjust this if needed
+
+[unstable]
+build-std =  ["core", "compiler_builtins"]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
